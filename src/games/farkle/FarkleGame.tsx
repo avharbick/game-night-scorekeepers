@@ -154,7 +154,27 @@ export default function FarkleGame({ onExit }: GameModuleProps) {
           <span className="brand-mark" aria-hidden="true">⚄</span><span>Game Night</span>
         </button>
         <div className="top-actions">
-          <button className="icon-button" onClick={() => setScreen("history")} aria-label="Game history">↺</button>
+          <button
+          className="icon-button"
+          onClick={() => setScreen("history")}
+          aria-label="Game history"
+          title="Game history"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="8.5" />
+            <path d="M12 7.5V12l3 2" />
+          </svg>
+        </button>
           <button className="icon-button" onClick={() => setSettingsOpen(true)} aria-label="Scoring settings">⚙</button>
         </div>
       </header>
