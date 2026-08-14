@@ -1,7 +1,7 @@
 {
   "name": "Game Night",
   "short_name": "Game Night",
-  "description": "A fast, friendly Farkle scorekeeper.",
+  "description": "A collection of friendly game-night scorekeepers.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

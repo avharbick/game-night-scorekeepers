@@ -1,8 +1,10 @@
 # How the app works
 
-You can understand almost the entire app from two files:
+The app is split into a shared game library and individual game modules:
 
-- `src/App.tsx` contains the data structures, scoring rules, saved-state logic, and screens.
+- `src/App.tsx` displays the game library and launches a selected module.
+- `src/games/catalog.ts` lists the games shown in the library.
+- `src/games/farkle/FarkleGame.tsx` contains Farkle's data structures, rules, saved-state logic, and screens.
 - `src/style.css` controls colors, spacing, typography, buttons, and phone layout.
 
 ## Data flow
@@ -34,12 +36,12 @@ The `screen` variable chooses among setup, active game, and history. The setting
 
 ## Easy changes
 
-- Default rules: edit `DEFAULT_SETTINGS` near the top of `src/App.tsx`.
+- Default rules: edit `DEFAULT_SETTINGS` near the top of `src/games/farkle/FarkleGame.tsx`.
 - Default players: edit `DEFAULT_NAMES`.
 - Colors: edit the variables at the top of `src/style.css`.
-- Quick-score buttons: find `[50, 100, 500, 1000]` in `src/App.tsx`.
+- Quick-score buttons: find `[50, 100, 500, 1000]` in `src/games/farkle/FarkleGame.tsx`.
 - App name and description: edit `index.html` and `public/manifest.webmanifest`.
 
 ## Adding another game later
 
-The visible shell is already named Game Night, but the current scoring engine is Farkle-specific. Before adding a second game, move the Farkle types, defaults, and `completeTurn()` rules into `src/games/farkle.tsx`, then add a small game-selection screen. That keeps shared navigation/history separate from each game's rules.
+Create a new component under `src/games/` that accepts the `GameModuleProps` type, then add one entry to `src/games/catalog.ts`. The shared library will create the new game card automatically. Give each module its own local-storage key so its settings and history remain independent.

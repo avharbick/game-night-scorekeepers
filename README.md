@@ -1,6 +1,6 @@
 # Game Night — portable source
 
-This is the standalone source code for the Game Night Farkle scorekeeper. It has no ChatGPT or OpenAI dependency, no backend, no API key, and no analytics. Game data is stored locally in the browser with `localStorage`.
+This is the standalone source code for Game Night, a modular collection of game scorekeepers. Farkle is the first included game. It has no ChatGPT or OpenAI dependency, no backend, no API key, and no analytics. Game data is stored locally in the browser with `localStorage`.
 
 ## Run it on your Windows computer
 
@@ -10,7 +10,7 @@ This is the standalone source code for the Game Night Farkle scorekeeper. It has
 4. Run `npm run dev`.
 5. Open the address printed in the terminal.
 
-The main app is in `src/App.tsx`. Its appearance is in `src/style.css`. The install/offline files are in `public/`. See `CODE_GUIDE.md` for a plain-English tour of the scoring and storage logic.
+The game library is in `src/App.tsx`, the module list is in `src/games/catalog.ts`, and Farkle is in `src/games/farkle/FarkleGame.tsx`. Appearance is controlled by `src/style.css`. The install/offline files are in `public/`. See `CODE_GUIDE.md` for a plain-English tour.
 
 ## Recommended hosting: GitHub Pages
 

@@ -5,7 +5,6 @@
   --paper: #fffafb;
   --line: #ead4dd;
   --accent: #f3a6c2;
-
   --font-body: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
   --font-display: ui-rounded, "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
 }
@@ -54,7 +53,7 @@ button:focus-visible, input:focus-visible { outline: 3px solid #bd5f8266; outlin
 .chevron { color: #89928e; font-size: 28px; }
 
 .game-status-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-.live-pill { display: flex; align-items: center; gap: 7px; background: #fbe4ed; color: var(--ink);}
+.live-pill { display: flex; align-items: center; gap: 7px; background: #fbe4ed; color: var(--ink); }
 .live-pill i { width: 7px; height: 7px; border-radius: 50%; background: #c94f7c; box-shadow: 0 0 0 4px #c94f7c21; }
 .text-button { border: 0; background: transparent; font-size: 12px; font-weight: 800; cursor: pointer; }
 .danger-text { color: #a34b3c; }
@@ -94,6 +93,23 @@ button:focus-visible, input:focus-visible { outline: 3px solid #bd5f8266; outlin
 .undo-bar small { color: var(--muted); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
 .undo-bar strong, .undo-bar b { font-size: 12px; }
 .undo-bar b { color: #356b4c; }
+
+.module-back { margin: 0 0 20px; padding: 6px 0; border: 0; background: transparent; color: var(--muted); font-size: 12px; font-weight: 900; cursor: pointer; }
+.library-hero { margin: 38px 0 27px; }
+.library-hero h1 { margin: 5px 0 0; font-size: clamp(43px, 13vw, 68px); line-height: .98; letter-spacing: -.065em; }
+.library-hero p { margin: 12px 0 0; color: var(--muted); font-size: 17px; }
+.game-library { display: grid; gap: 14px; }
+.game-card { width: 100%; min-height: 128px; display: grid; grid-template-columns: 70px 1fr auto; align-items: center; gap: 16px; padding: 20px; border: 1px solid var(--line); border-radius: 24px; background: var(--paper); box-shadow: 0 13px 32px #4a20350f; text-align: left; cursor: pointer; transition: transform .16s ease, box-shadow .16s ease; }
+.game-card:hover { transform: translateY(-2px); box-shadow: 0 17px 38px #4a20351a; }
+.game-card:active { transform: translateY(1px); }
+.game-card-icon { width: 66px; height: 66px; display: grid; place-items: center; border-radius: 19px; background: var(--ink); color: var(--accent); font-size: 40px; transform: rotate(-4deg); }
+.game-card-copy { min-width: 0; }
+.game-card-copy small, .game-card-copy strong, .game-card-copy > span { display: block; }
+.game-card-copy small { margin-bottom: 3px; color: var(--muted); font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.game-card-copy strong { font-family: var(--font-display); font-size: 27px; letter-spacing: -.04em; }
+.game-card-copy > span { margin-top: 3px; color: var(--muted); font-size: 13px; }
+.game-card-arrow { color: var(--ink); font-size: 26px; }
+.library-note { margin: 20px 0 0; color: var(--muted); font-size: 12px; text-align: center; }
 
 .view-title { display: flex; align-items: flex-start; gap: 14px; margin: 12px 0 26px; }
 .view-title h1 { font-size: clamp(39px, 11vw, 58px); }
